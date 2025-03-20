@@ -11,6 +11,7 @@ import Lessons from './pages/Lessons'
 import Acess_Lessons from './pages/Acess-Lessons'
 import TestResults from './pages/TestResults'
 import TaskSubmission from './components/TaskSubmission'
+import TestSubmission from './components/TestSubmission'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="tasks" element={<Tasks />} />
           <Route path="tasks/:id" element={<TaskSubmission />} />
           <Route path="tests" element={<Tests />} />
+          <Route path="tests/:id" element={<TestSubmission />} />
           <Route path="articles" element={<Articles />} />
           <Route path="profile" element={<Profile />} />
           <Route path="acess-lessons" element={<Acess_Lessons />} />

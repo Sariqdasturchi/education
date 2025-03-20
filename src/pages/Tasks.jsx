@@ -22,7 +22,7 @@ const Tasks = () => {
     <div>
       <PageHeader title="Topshiriqlar" />
       <div className="mt-6 flex flex-wrap gap-6 justify-start ml-4">
-      {tasks.map((task) => (
+        {tasks.map((task) => (
           <div key={task.id} onClick={() => handleTaskClick(task)} className="cursor-pointer">
             <TaskCard number={task.number} title={task.title} description={task.description} status={task.status} />
           </div>
