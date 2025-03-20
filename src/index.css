@@ -9,7 +9,11 @@
 * {
     font-family: "Poppins", sans-serif;
 }
-
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f9fafb;
+  }
+  
 html {
     scroll-behavior: smooth;
 }

@@ -1,14 +1,16 @@
 import React from 'react'
 import Home from './home'
 import About from './about'
+import Header from '../components/Header'
 
 export default function Main() {
   return (
     <>
-        <main>
-            <Home />
-            <About />
-        </main>
+      <main>
+        <Header />
+        <Home />
+        <About />
+      </main>
     </>
   )
 }
