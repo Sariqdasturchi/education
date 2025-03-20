@@ -1,6 +1,6 @@
 export const TaskCard = ({ number, title, description, status }) => {
     const statusColors = {
-        Yuborildi: "bg-blue-600 text-white",
+        Yuborish: "bg-blue-600 text-white",
         Bajarildi: "bg-green-600 text-white",
         Muvaffaqiyatsiz: "bg-red-600 text-white",
         Bajarilmadi: "bg-gray-400 text-white",

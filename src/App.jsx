@@ -10,6 +10,7 @@ import Profile from './pages/Profile'
 import Lessons from './pages/Lessons'
 import Acess_Lessons from './pages/Acess-Lessons'
 import TestResults from './pages/TestResults'
+import TaskSubmission from './components/TaskSubmission'
 
 export default function App() {
   return (
@@ -19,12 +20,13 @@ export default function App() {
         <Route path="/" element={<Main />} />
         <Route path="/dashboard" element={<Layout />}>
           <Route index element={<Lessons />} />
-          <Route path="/tasks" element={<Tasks />} />
-          <Route path="/tests" element={<Tests />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/acess-lessons" element={<Acess_Lessons />} />
-          <Route path="/test-results" element={<TestResults />} />
+          <Route path="tasks" element={<Tasks />} />
+          <Route path="tasks/:id" element={<TaskSubmission />} />
+          <Route path="tests" element={<Tests />} />
+          <Route path="articles" element={<Articles />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="acess-lessons" element={<Acess_Lessons />} />
+          <Route path="test-results" element={<TestResults />} />
         </Route>
       </Routes>
     </BrowserRouter>
