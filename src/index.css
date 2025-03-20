@@ -1,5 +1,5 @@
 /* font import */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap");
 /* tailwind import */
 @import "tailwindcss";
 /* home page bacground-color: #E2EAFF; */
@@ -7,27 +7,110 @@
 
 /* STYLES */
 * {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .userbacground {
-    background-image: url('./assets/homeuserbacground.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url("./assets/homeuserbacground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .homeuser {
-    background-image: url('./assets/homeuser.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url("./assets/homeuser.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .aboutuser {
-    background-image: url('./assets/aboutuser.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url("./assets/aboutuser.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.elementimg {
+  background-image: url("./assets/element.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.homeplan {
+  background-image: url("./assets/homeplan.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.avatarimg1 {
+  background-image: url("./assets/avatar-img1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.avatarimg2 {
+  background-image: url("./assets/avatar-img2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.avatarimg3 {
+  background-image: url("./assets/avatar-img3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 20px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  width: 361px;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #E7E7E7;
+  padding: 21px 16px;
+}
+
+.slick-prev,
+.slick-next {
+  opacity: 1 !important;
+  background-color: #c0d1ff !important;
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: -100px !important;
+}
+
+.slick-next {
+  right: -100px !important;
+}
+
+.slick-prev::after,
+.slick-next::after {
+  color: black;
+  border-top-width: 3px !important;
+  border-left-width: 3px !important;
+  border-top-left-radius: 2px !important;
+  border-top-right-radius: 2px !important;
+  top: 50% !important;
+  left: 50% !important;
+}
+
+.slick-prev::after {
+  transform: translate(-50%, -50%) rotateZ(-45deg) !important;
+}
+
+.slick-next::after {
+  transform: translate(-50%, -50%) rotateZ(135deg) !important;
 }
