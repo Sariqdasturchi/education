@@ -10,7 +10,7 @@ export default function About () {
     >
       <div className='w-[80%] h-auto flex flex-col justify-center items-center py-16'>
         <div className='w-full h-[108px] flex justify-between items-center mb-10'>
-          <div className='w-[25%]'>
+          <div className='w-[30%]'>
             <h2 className='text-[36px] font-semibold text-[#13265C]'>
               Darsliklar muallifi{' '}
               <span className='text-[#3857AF]'>bilan tanishing</span>
