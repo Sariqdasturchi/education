@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowLeftOutlined, CheckOutlined } from "@ant-design/icons";
 import { Button } from "antd";
-
+import { Modal } from "antd";
 export default function TestSubmission() {
     const handleBack = () => {
         window.history.back();
@@ -10,7 +10,7 @@ export default function TestSubmission() {
     const [timeLeft, setTimeLeft] = useState(600); // 10 daqiqa = 600 soniya
     const [selectedAnswers, setSelectedAnswers] = useState({});
     const [answeredCount, setAnsweredCount] = useState(0);
-
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const tests = [
         {
             id: 1,
@@ -60,6 +60,20 @@ export default function TestSubmission() {
         return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
     };
 
+
+
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleOk = () => {
+        setIsModalOpen(false);
+        alert("Test yakunlandi")
+    };
+
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
     return (
         <div className="w-full mx-auto">
             {/* Header */}
@@ -128,12 +142,39 @@ export default function TestSubmission() {
 
                     {/* Tugma */}
                     <Button
-                        type="primary"
-                        size="large"
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl"
+                type="primary"
+                size="large"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl"
+                onClick={showModal}
+            >
+                Testni yakunlash
+            </Button>
+            
+                    
+            <Modal
+                title={<span className="text-lg font-semibold">Testni yakunlaysizmi?</span>}
+                open={isModalOpen}
+                onCancel={handleCancel}
+                footer={[
+                    <Button
+                        key="cancel"
+                        onClick={handleCancel}
+                        style={{ backgroundColor: "#FF5858", color: "white", border: "none", borderRadius: "8px" }}
                     >
-                        Testni yakunlash
+                        Yo‘q
+                    </Button>,
+                    <Button
+                        key="ok"
+                        type="primary"
+                        onClick={handleOk}
+                        style={{ backgroundColor: "#3857AF", color: "white", border: "none", borderRadius: "8px" }}
+                    >
+                        Ha, yakunlayman
                     </Button>
+                ]}
+                centered
+            />
+
                 </div>
             </div>
         </div>
