@@ -7,7 +7,7 @@ export default function LessonPlan() {
   const [stateCollapse2, setStateCollapse2] = useState(false);
   const [stateCollapse3, setStateCollapse3] = useState(false);
   return (
-    <section className="w-full h-auto flex justify-center items-center bg-[#E2EAFF]">
+    <section id="education-about" className="w-full h-auto flex justify-center items-center bg-[#E2EAFF]">
       <div className="w-[80%] h-auto flex flex-col justify-center items-center pt-8">
         <div className="w-full h-[108px] flex justify-between items-center mb-12">
           <div className="w-[30%]">

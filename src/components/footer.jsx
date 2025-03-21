@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="w-full h-auto flex justify-center items-center bg-[#13265C]">
@@ -60,6 +62,14 @@ export default function Footer() {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
+        </div>
+        <div className="pt-[30px] self-start text-white">
+          <Link to={"/"} className="text-[32px] font-extrabold uppercase">
+            Sayt Nomi
+          </Link>
+          <p className="text-[20px] pt-[15px]">
+            © 2025 Sayt nomi. Barcha huquqlar himoyalangan
+          </p>
         </div>
       </div>
     </footer>
