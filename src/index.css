@@ -56,67 +56,19 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.slide {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  padding: 20px;
-  width: 100%;
-}
-
-.card {
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  width: 361px;
-  height: auto;
-  border-radius: 10px;
-  background-color: white;
-  border: 1px solid #E7E7E7;
-  padding: 21px 16px;
-}
-
-.slick-prev,
-.slick-next {
-  opacity: 1 !important;
-  background-color: #c0d1ff !important;
-  width: 70px !important;
-  height: 70px !important;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-}
-
-.slick-prev {
-  left: -100px !important;
-}
-
-.slick-next {
-  right: -100px !important;
-}
-
-.slick-prev::after,
-.slick-next::after {
-  color: black;
-  border-top-width: 3px !important;
-  border-left-width: 3px !important;
-  border-top-left-radius: 2px !important;
-  border-top-right-radius: 2px !important;
-  top: 50% !important;
-  left: 50% !important;
-}
-
-.slick-prev::after {
-  transform: translate(-50%, -50%) rotateZ(-45deg) !important;
-}
-
-.slick-next::after {
-  transform: translate(-50%, -50%) rotateZ(135deg) !important;
-}
 .ant-drawer-header{ 
   padding: 10px 24px !important;
 }
 .ant-drawer-body {
   padding: 10px 24px !important;
+}
+
+.swiper-wrapper {
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -20,16 +20,16 @@ export default function Header() {
   return (
     <>
       <header className="flex bg-[#E2EAFF] h-auto justify-center w-full items-center">
-        <nav className="flex h-[75px] justify-between w-[90%] items-center">
+        <nav className="flex h-[75px] justify-between w-[90%] items-center xl:w-[80%]">
           {/* logo */}
           <div>
-            <Link to={"/"} className="text-[16px] font-extrabold uppercase">
+            <Link to={"/"} className="text-[16px] font-extrabold lg:text-[32px] md:text-[24px] uppercase">
               Sayt Nomi
             </Link>
           </div>
           {/* menu list */}
-          <div>
-            <ul className="hidden">
+          <div className="hidden md:block">
+            <ul className="flex">
               {NavmenuList.map((item, index) => {
                 const isActive =
                   (item.link === "/" &&
@@ -40,9 +40,9 @@ export default function Header() {
                 return (
                   <li
                     key={item.id}
-                    className={`${
-                      index === NavmenuList.length - 1 ? "mr-0" : "mr-8"
-                    }`}
+                    className={`lg:mr-[27px] ${
+                      index === NavmenuList.length - 1 ? "mr-0" : "mr-4"
+                    } ${index === 0 ? "hidden lg:block" : ""}`}
                   >
                     <a
                       href={item.link}
@@ -58,13 +58,16 @@ export default function Header() {
             </ul>
           </div>
           {/* login button */}
-          <div>
-            <button className="bg-[#13265C] h-[46px] justify-center rounded-full w-[46px] cursor-pointer hidden hover:bg-[#1D3A8A] items-center">
+          <div className="hidden md:block">
+            <button className="flex bg-[#13265C] h-[46px] justify-center rounded-full w-[46px] cursor-pointer hover:bg-[#1D3A8A] items-center">
               <FaUser className="text-[#C0D1FF] text-[18px]" />
             </button>
           </div>
-          <div>
-            <button onClick={showDrawer} className="p-1 cursor-pointer">
+          <div className="block md:hidden">
+            <button
+              onClick={showDrawer}
+              className="p-1 cursor-pointer"
+            >
               <i className="text-xl fa-bars fa-solid"></i>
             </button>
           </div>
@@ -78,9 +81,7 @@ export default function Header() {
         closeIcon={
           <i className="text-[#464B59] text-2xl fa-solid fa-xmark"></i>
         }
-        headerStyle={{
-          borderBottom: "0",
-        }}
+        styles={{ header: { border: "0" } }} 
       >
         <ul className="flex flex-col gap-[14px]">
           {NavmenuList.filter((_, index) => index !== 0).map((item, index) => {
@@ -97,8 +98,13 @@ export default function Header() {
                   index === NavmenuList.length - 1 ? "mr-0" : "mr-8"
                 }`}
               >
-                <i className={`${item.icon} text-xl ${isActive ? "!text-[#C0D1FF]" : "!text-[#13265C]"}`}></i>
+                <i
+                  className={`${item.icon} text-xl ${
+                    isActive ? "!text-[#C0D1FF]" : "!text-[#13265C]"
+                  }`}
+                ></i>
                 <a
+                  onClick={onClose}
                   href={item.link}
                   className={`text-[16px] font-medium ${
                     isActive ? "!text-[#C0D1FF]" : "!text-[#13265C]"
