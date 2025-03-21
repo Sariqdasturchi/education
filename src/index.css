@@ -1,0 +1,40 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap');
+/* tailwind import */
+@import "tailwindcss";
+/* home page bacground-color: #E2EAFF; */
+/* buttons bacground-color: #13265C; #464B59 */
+
+/* STYLES */
+* {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f9fafb;
+  }
+  
+html {
+    scroll-behavior: smooth;
+}
+
+.userbacground {
+    background-image: url('./assets/homeuserbacground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.homeuser {
+    background-image: url('./assets/homeuser.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.aboutuser {
+    background-image: url('./assets/aboutuser.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.border_stroke{
+    @apply border-1 border-[#e7e7e7]
+}
