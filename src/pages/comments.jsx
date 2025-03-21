@@ -53,7 +53,7 @@ export default function Comments() {
   }
 
   return (
-    <div className="w-full h-auto flex items-center justify-center bg-[#F4F7FF]">
+    <section id="comments" className="w-full h-auto flex items-center justify-center bg-[#F4F7FF]">
       <div className="w-[80%] h-auto py-16 relative">
         <div className="w-full h-[108px] flex justify-between items-center mb-10">
           <div className="w-[30%]">
@@ -89,6 +89,6 @@ export default function Comments() {
           ))}
         </Carousel>
       </div>
-    </div>
+    </section>
   );
 }

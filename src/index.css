@@ -114,3 +114,9 @@ html {
 .slick-next::after {
   transform: translate(-50%, -50%) rotateZ(135deg) !important;
 }
+.ant-drawer-header{ 
+  padding: 10px 24px !important;
+}
+.ant-drawer-body {
+  padding: 10px 24px !important;
+}

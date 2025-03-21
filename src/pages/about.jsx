@@ -5,26 +5,26 @@ import { AboutSkilList } from '../utils/constant'
 export default function About () {
   return (
     <section
-      className='w-full h-auto flex justify-center items-center bg-[#F4F7FF]'
+      className='flex bg-[#F4F7FF] h-auto justify-center w-full items-center'
       id='about'
     >
-      <div className='w-[80%] h-auto flex flex-col justify-center items-center py-16'>
-        <div className='w-full h-[108px] flex justify-between items-center mb-10'>
+      <div className='flex flex-col h-auto justify-center w-[80%] items-center py-16'>
+        <div className='flex h-[108px] justify-between w-full items-center mb-10'>
           <div className='w-[30%]'>
-            <h2 className='text-[36px] font-semibold text-[#13265C]'>
+            <h2 className='text-[#13265C] text-[36px] font-semibold'>
               Darsliklar muallifi{' '}
               <span className='text-[#3857AF]'>bilan tanishing</span>
             </h2>
           </div>
           <div>
-            <button className='w-[241px] h-[44px] rounded-[50px] bg-[#13265C] text-[16px] font-normal text-white cursor-pointer hover:bg-[#BBBBBB] transform duration-500'>
-              Darslarni ko’rish <GoArrowRight className='inline text-[20px]' />
+            <button className='bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform'>
+              Darslarni ko’rish <GoArrowRight className='text-[20px] inline' />
             </button>
           </div>
         </div>
-        <div className='w-full h-auto flex items-center mb-5'>
-          <div className='w-[285px] h-[360px] aboutuser'></div>
-          <div className='w-[70%] h-[360px] flex justify-center items-center'>
+        <div className='flex h-auto w-full items-center mb-5'>
+          <div className='h-[360px] w-[285px] aboutuser'></div>
+          <div className='flex h-[360px] justify-center w-[70%] items-center'>
             <ul className='flex flex-col justify-center'>
               {AboutSkilList.map((item, index) => (
                 <li
