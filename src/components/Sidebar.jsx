@@ -9,11 +9,12 @@ import {
   ReadOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion"; // Keeps ESLint happy
+
 
 const Sidebar = () => {
   return (
-    <motion.div
+    <Motion.div
       className="w-[250px] h-screen bg-white shadow-md p-4  fixed top-0 left-0"
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
@@ -50,7 +51,7 @@ const Sidebar = () => {
   <span className="text-gray-800 font-medium">John Doe</span>
 </div>
 
-    </motion.div>
+    </Motion.div>
   );
 };
 
