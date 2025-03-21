@@ -8,10 +8,10 @@ export default function App () {
   return (
     <BrowserRouter>
       <Header />
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<Main />} />
-      </Routes> */}
-      {/* <Footer /> */}
+      </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
