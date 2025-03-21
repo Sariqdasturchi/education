@@ -56,6 +56,11 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.loginimg {
+  background-image: url("./assets/login-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .ant-drawer-header{ 
   padding: 10px 24px !important;
 }
