@@ -1,7 +1,9 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
 
 export default function Education() {
+  const navigate = useNavigate();
   return (
     <section
       className="flex bg-[#E2EAFF] h-auto justify-center w-full items-center"
@@ -9,12 +11,15 @@ export default function Education() {
     >
       <div className="flex flex-col h-auto justify-center w-[90%] items-center md:12 md:py-8 py-4 xl:py-16 xl:w-[80%]">
         <div className="flex h-[108px] justify-between w-full items-center lg:pb-10">
-            <h2 className="text-[#13265C] text-[24px] font-semibold lg:text-[36px]">
-              Mustaqil ta`lim{" "}
-              <span className="text-[#3857AF] block">tizimining mаqsаdi</span>
-            </h2>
+          <h2 className="text-[#13265C] text-[24px] font-semibold lg:text-[36px]">
+            Mustaqil ta`lim{" "}
+            <span className="text-[#3857AF] block">tizimining mаqsаdi</span>
+          </h2>
           <div className="hidden md:block">
-            <button className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform">
+            <button
+              onClick={() => navigate("/login")}
+              className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform"
+            >
               Darslarni ko’rish <GoArrowRight className="text-[20px] inline" />
             </button>
           </div>
@@ -34,7 +39,10 @@ export default function Education() {
               foydalanib talabalarning mustaqil ta`limini takomillashtirishdan
               iborat.
             </h4>
-            <button className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform">
+            <button
+              onClick={() => navigate("/login")}
+              className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform"
+            >
               Darslarni ko’rish <GoArrowRight className="text-[20px] inline" />
             </button>
           </div>

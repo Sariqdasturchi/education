@@ -1,8 +1,11 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { AboutSkilList } from "../utils/constant";
+import { useNavigate } from "react-router-dom";
 
 export default function About() {
+  const navigate = useNavigate();
+  
   return (
     <section
       className="flex bg-[#F4F7FF] h-auto justify-center w-full items-center"
@@ -15,7 +18,10 @@ export default function About() {
             <span className="text-[#3857AF] block">bilan tanishing</span>
           </h2>
           <div className="hidden md:block">
-            <button className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform">
+            <button
+              onClick={() => navigate("/login")}
+              className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform"
+            >
               Darslarni ko’rish <GoArrowRight className="text-[20px] inline" />
             </button>
           </div>
@@ -44,7 +50,10 @@ export default function About() {
             ))}
           </ul>
           <div className="w-full md:hidden">
-            <button className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-full cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] max-w-[400px] transform">
+            <button
+              onClick={() => navigate("/login")}
+              className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-full cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] max-w-[400px] transform"
+            >
               Darslarni ko’rish <GoArrowRight className="text-[20px] inline" />
             </button>
           </div>

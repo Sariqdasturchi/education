@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { GoArrowRight } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
 
 const items = [
   {
@@ -48,6 +49,7 @@ const items = [
 export default function Comments() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const navigate = useNavigate()
 
   return (
     <section
@@ -61,7 +63,7 @@ export default function Comments() {
               O’quvchilarning{" "}
               <span className="text-[#3857AF] block">bergan fikrlari</span>
             </h2>
-            <button className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hidden hover:bg-[#BBBBBB] transform xl:block">
+            <button onClick={()=>navigate('/login')} className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hidden hover:bg-[#BBBBBB] transform xl:block">
               Darslarni ko’rish <GoArrowRight className="text-[20px] inline" />
             </button>
             <div className="flex gap-5 xl:hidden">

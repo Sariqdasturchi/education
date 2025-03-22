@@ -1,11 +1,13 @@
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
 
 export default function LessonPlan() {
   const [stateCollapse1, setStateCollapse1] = useState(false);
   const [stateCollapse2, setStateCollapse2] = useState(false);
   const [stateCollapse3, setStateCollapse3] = useState(false);
+  const navigate = useNavigate();
   return (
     <section
       id="education-about"
@@ -18,7 +20,10 @@ export default function LessonPlan() {
             <span className="text-[#3857AF] block">tizimining tarkibi</span>
           </h2>
           <div className="hidden md:block">
-            <button className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform">
+            <button
+              onClick={() => navigate("/login")}
+              className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform"
+            >
               Darslarni ko’rish <GoArrowRight className="text-[20px] inline" />
             </button>
           </div>
@@ -157,7 +162,10 @@ export default function LessonPlan() {
               </div>
             </div>
             <div className="w-full bottom-10 md:hidden relative">
-              <button className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-full cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] max-w-[400px] transform">
+              <button
+                onClick={() => navigate("/login")}
+                className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-full cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] max-w-[400px] transform"
+              >
                 Darslarni ko’rish{" "}
                 <GoArrowRight className="text-[20px] inline" />
               </button>

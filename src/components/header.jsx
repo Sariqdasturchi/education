@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 import { NavmenuList } from "../utils/constant";
 import { FaUser } from "react-icons/fa";
@@ -8,6 +8,7 @@ import { Drawer } from "antd";
 export default function Header() {
   const location = useLocation();
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   const showDrawer = () => {
     setOpen(true);
@@ -23,7 +24,10 @@ export default function Header() {
         <nav className="flex h-[75px] justify-between w-[90%] items-center xl:w-[80%]">
           {/* logo */}
           <div>
-            <Link to={"/"} className="text-[16px] font-extrabold lg:text-[32px] md:text-[24px] uppercase">
+            <Link
+              to={"/"}
+              className="text-[16px] font-extrabold lg:text-[32px] md:text-[24px] uppercase"
+            >
               Sayt Nomi
             </Link>
           </div>
@@ -59,15 +63,15 @@ export default function Header() {
           </div>
           {/* login button */}
           <div className="hidden md:block">
-            <button className="flex bg-[#13265C] h-[46px] justify-center rounded-full w-[46px] cursor-pointer hover:bg-[#1D3A8A] items-center">
+            <button
+              onClick={() => navigate("/login")}
+              className="flex bg-[#13265C] h-[46px] justify-center rounded-full w-[46px] cursor-pointer hover:bg-[#1D3A8A] items-center"
+            >
               <FaUser className="text-[#C0D1FF] text-[18px]" />
             </button>
           </div>
           <div className="block md:hidden">
-            <button
-              onClick={showDrawer}
-              className="p-1 cursor-pointer"
-            >
+            <button onClick={showDrawer} className="p-1 cursor-pointer">
               <i className="text-xl fa-bars fa-solid"></i>
             </button>
           </div>
@@ -81,7 +85,7 @@ export default function Header() {
         closeIcon={
           <i className="text-[#464B59] text-2xl fa-solid fa-xmark"></i>
         }
-        styles={{ header: { border: "0" } }} 
+        styles={{ header: { border: "0" } }}
       >
         <ul className="flex flex-col gap-[14px]">
           {NavmenuList.filter((_, index) => index !== 0).map((item, index) => {
