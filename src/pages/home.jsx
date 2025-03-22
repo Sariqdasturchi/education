@@ -1,6 +1,8 @@
 import { GoArrowRight } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <section
       id="home"
@@ -36,7 +38,10 @@ export default function Home() {
               </h1>
             </div>
             <div className="hidden md:block pt-5">
-              <button className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform">
+              <button
+                onClick={() => navigate("/login")}
+                className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform"
+              >
                 Darslarni ko’rish{" "}
                 <GoArrowRight className="text-[20px] inline" />
               </button>
@@ -54,7 +59,10 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full md:hidden pt-5">
-            <button className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-full cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform">
+            <button
+              onClick={() => navigate("/login")}
+              className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-full cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform"
+            >
               Darslarni ko’rish <GoArrowRight className="text-[20px] inline" />
             </button>
           </div>
