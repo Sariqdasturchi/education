@@ -77,3 +77,18 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+/* Umumiy Menu styling */
+.custom-menu .ant-menu-item {
+    color: #C0D1FF !important; /* Matn rangi */
+    font-size: 16px !important; /* Matn o‘lchami */
+    font-weight: 500 !important; /* Matn qalinligi */
+    padding: 8px 12px !important; /* Ichki padding */
+    border-radius: 6px !important; /* Item burchaklarini yumshatish */
+}
+
+.custom-menu .ant-menu-item-selected {
+    background-color: #E2EAFF !important; /* Active background */
+    color: #13265C !important; /* Active text rangi */
+}
+
