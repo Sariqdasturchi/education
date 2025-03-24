@@ -40,7 +40,8 @@ const Profile = () => {
           className={`flex items-center gap-2 px-4 py-2 rounded-full cursor-pointer ${activeTab === 'profile' ? 'bg-[#13265C] text-white' : 'bg-gray-100 text-[#13265C]'
             }`}
           onClick={() => setActiveTab('profile')}
-        >
+        > 
+          {/* test */}
           <UserOutlined />
           <span>Mening profilim</span>
         </div>
