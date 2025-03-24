@@ -37,6 +37,7 @@ const ArticlePage = () => {
               <RecommendedCard />
               <RecommendedCard />
               <RecommendedCard />
+              <RecommendedCard />
             </div>
 
           </section>
