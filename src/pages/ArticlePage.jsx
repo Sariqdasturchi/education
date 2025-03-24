@@ -24,14 +24,14 @@ const ArticlePage = () => {
     
     <>
         <PageHeader title="Teskari Proporsional Miqdorlar" other={returnBtn} />
-        <main className="flex flex-wrap justify-evenly p-10">
-          <div className="flex flex-col max-w-[632px] gap-5">
-            <h1 className="text-2xl font-bold ">{article.title}</h1>
+        <main className="flex flex-wrap xl:flex-nowrap justify-around py-5">
+          <div className="flex flex-col max-w-xl xl:max-w-[632px] gap-5">
+            <h1 className="text-xl lg:text-2xl font-bold ">{article.title}</h1>
             <img src={image} alt="Article image" />
-            <p className="text-lg font-medium">{article.text}</p>
+            <p className="text-base lg:text-lg font-medium">{article.text}</p>
           </div>
           <section className="flex flex-col border_stroke rounded-lg py-3 bg-white">
-            <div className="flex border-b-1 border-[#E7E7E7] justify-center items-center p-5"><h1 className="text-2xl font-medium">Tavsiya etiladigan maqolalar</h1></div>
+            <div className="flex border-b-1 border-[#E7E7E7] justify-center items-center p-5"><h1 className="text-xl lg:text-2xl font-medium">Tavsiya etiladigan maqolalar</h1></div>
             
             <div className="flex flex-col gap-2 p-3">
               <RecommendedCard />

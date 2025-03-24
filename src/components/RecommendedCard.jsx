@@ -8,16 +8,16 @@ function RecommendedCard() {
     <>
         <section className=' p-2 bg-white border_stroke rounded-[10px] cursor-pointer max-h-[100px]' onClick={()=>navigate(`/dashboard/articles/${1}`)}>
             <div className='flex gap-2 p-1'>
-                <div className='overflow-hidden max-w-[70px] max-h-[70px] rounded-2xl '>
+                <div className='flex items-center overflow-hidden max-w-14 md:max-w-[70px] max-h-14 md:max-h-[70px] rounded-2xl'>
                     <img src={image} alt="Article image" className='w-full h-full object-cover'/>
                 </div>
             
                 <div className='flex flex-col gap-2'>
-                    <p className='font-semibold text-base'>Teskari proporsional miqdorlar</p>
-                    <p className='text-[#464B59] text-sm'>
+                    <p className='font-semibold text-xs md:text-base'>Teskari proporsional miqdorlar</p>
+                    <p className='text-[#464B59] text-xs md:text-sm'>
                     ikki miqdor orasidagi eng sodda bog'lani...
                     </p>
-                    <p className='flex items-center gap-1 text-sm text-[#464B59]'>
+                    <p className='flex items-center gap-1 text-xs md:text-sm text-[#464B59]'>
                         <FaRegCalendar color='blue' /> May 23, 2025
                     </p>
                 </div>
