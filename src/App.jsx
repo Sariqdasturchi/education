@@ -1,3 +1,4 @@
+
 // react-router-dom
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./pages/main";
@@ -10,6 +11,16 @@ import Testlar from "./admin/pages/testlar";
 import Analitika from "./admin/pages/analitika";
 import Topshiriqlar from "./admin/pages/topshiriqlar";
 import Maqolalarim from "./admin/pages/maqolalarim";
+import Layout from './components/Layout'
+import Tasks from './pages/Tasks'
+import Tests from './pages/Tests'
+import Articles from './pages/Articles'
+import Profile from './pages/Profile'
+import Lessons from './pages/Lessons'
+import Acess_Lessons from './pages/Acess-Lessons'
+import TestResults from './pages/TestResults'
+import TaskSubmission from './components/TaskSubmission'
+import TestSubmission from './components/TestSubmission'
 
 export default function App() {
   return (
@@ -20,11 +31,21 @@ export default function App() {
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin/home" element={<AdminHome />} />
         <Route path="/admin" element={<AdminLayout />}>
-          <Route path="/admin/darsliklar" element={<Darslar />} />
-          <Route path="/admin/testlar" element={<Testlar />} />
-          <Route path="/admin/analitika" element={<Analitika />} />
-          <Route path="/admin/topshiriqlar" element={<Topshiriqlar />} />
-          <Route path="/admin/maqolalarim" element={<Maqolalarim />} />
+        <Route path="/admin/darsliklar" element={<Darslar />} />
+        <Route path="/admin/testlar" element={<Testlar />} />
+        <Route path="/admin/analitika" element={<Analitika />} />
+        <Route path="/admin/topshiriqlar" element={<Topshiriqlar />} />
+        <Route path="/admin/maqolalarim" element={<Maqolalarim />} />
+        <Route path="/dashboard" element={<Layout />}>
+        <Route index element={<Lessons />} />
+        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/tasks/:id" element={<TaskSubmission />} />
+        <Route path="/tests" element={<Tests />} />
+        <Route path="/tests/:id" element={<TestSubmission />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/acess-lessons" element={<Acess_Lessons />} />
+        <Route path="/test-results" element={<TestResults />} />
         </Route>
       </Routes>
     </BrowserRouter>
