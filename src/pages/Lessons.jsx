@@ -1,6 +1,7 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
 import LessonCard from "../components/LessonCard";
+import { Sidebar } from "lucide-react";
 
 const Lessons = () => {
 
