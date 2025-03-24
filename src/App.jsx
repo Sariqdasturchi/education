@@ -30,14 +30,14 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin/home" element={<AdminHome />} />
-        <Route path="/admin" element={<AdminLayout />}>
+        <Route path="/admin" element={<AdminLayout />} />
         <Route path="/admin/darsliklar" element={<Darslar />} />
         <Route path="/admin/testlar" element={<Testlar />} />
         <Route path="/admin/analitika" element={<Analitika />} />
         <Route path="/admin/topshiriqlar" element={<Topshiriqlar />} />
         <Route path="/admin/maqolalarim" element={<Maqolalarim />} />
-        <Route path="/dashboard" element={<Layout />}>
-        <Route index element={<Lessons />} />
+        <Route path="/dashboard" element={<Layout />} />
+        <Route path="/lesson" element={<Lessons />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/tasks/:id" element={<TaskSubmission />} />
         <Route path="/tests" element={<Tests />} />
@@ -46,7 +46,6 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/acess-lessons" element={<Acess_Lessons />} />
         <Route path="/test-results" element={<TestResults />} />
-        </Route>
       </Routes>
     </BrowserRouter>
   );
