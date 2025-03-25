@@ -20,6 +20,7 @@ function RecommendedCard() {
                     <p className='flex items-center gap-1 text-xs md:text-sm text-[#464B59]'>
                         <FaRegCalendar color='blue' /> May 23, 2025
                     </p>
+                    <p>Hello test</p>
                 </div>
             </div>
         </section>
