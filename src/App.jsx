@@ -32,6 +32,7 @@ import Acess_Lessons from './pages/Acess-Lessons'
 import TestResults from './pages/TestResults'
 import TaskSubmission from './components/TaskSubmission'
 import TestSubmission from './components/TestSubmission'
+import ArticlePage from './pages/ArticlesPage'
 
 export default function App () {
   return (
@@ -69,6 +70,7 @@ export default function App () {
           <Route path='tests' element={<Tests />} />
           <Route path='tests/:id' element={<TestSubmission />} />
           <Route path='articles' element={<Articles />} />
+          <Route path='articles:id' element={<ArticlePage />} />
           <Route path='profile' element={<Profile />} />
           <Route path='access-lessons' element={<Acess_Lessons />} />
           <Route path='test-results' element={<TestResults />} />
