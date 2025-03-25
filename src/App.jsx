@@ -46,7 +46,7 @@ export default function App () {
           <Route path='tests' element={<Tests />} />
           <Route path='tests/:id' element={<TestSubmission />} />
           <Route path='articles' element={<Articles />} />
-          <Route path='articles:id' element={<ArticlePage />} />
+          <Route path='articles/:id' element={<ArticlePage />} />
           <Route path='profile' element={<Profile />} />
           <Route path='access-lessons' element={<Acess_Lessons />} />
           <Route path='test-results' element={<TestResults />} />
