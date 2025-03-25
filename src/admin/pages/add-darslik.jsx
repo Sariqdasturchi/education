@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import React, { useState } from "react";
 import styled from "styled-components";
+import DarslikAddVideo from "./darslik-add-video";
 
 const StyledInput = styled(Input)`
   border: 1px solid #e7e7e7 !important;
@@ -240,117 +241,129 @@ const items = [
 ];
 
 export default function AddDarslik() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   const onFinish = (values) => {
     console.log(values);
   };
   const onSubmit = (e) => {
-    console.log(e.key);
+    if (e.key === "3" || e.key === "4" || e.key === "5") {
+      showModal();
+    }
   };
   return (
-    <div className="flex items-start justify-between">
-      <div className="max-w-[450px] w-full">
-        <Form
-          name="basic"
-          onFinish={onFinish}
-          layout="vertical"
-          autoComplete="off"
-          className="flex flex-col gap-5"
-          requiredMark={false}
-        >
-          <Form.Item
-            className="!mb-0"
-            label={
-              <span className="font-medium text-[#13265C]">Dars nomi</span>
-            }
-            name="lessonName"
-            rules={[
-              {
-                required: true,
-                message: "Iltimos dars nomini kiriting!",
-              },
-            ]}
+    <>
+      <div className="flex items-start justify-between">
+        <div className="max-w-[450px] w-full">
+          <Form
+            name="basic"
+            onFinish={onFinish}
+            layout="vertical"
+            autoComplete="off"
+            className="flex flex-col gap-5"
+            requiredMark={false}
           >
-            <StyledInput size="large" placeholder="Dars nomi" />
-          </Form.Item>
-          <div className="flex items-center gap-[10px]">
             <Form.Item
               className="!mb-0"
               label={
-                <span className="font-medium text-[#13265C]">
-                  Jami darslar soni
-                </span>
+                <span className="font-medium text-[#13265C]">Dars nomi</span>
               }
-              name="lessonCount"
+              name="lessonName"
               rules={[
                 {
                   required: true,
-                  message: "Iltimos dars sonini kiriting!",
+                  message: "Iltimos dars nomini kiriting!",
                 },
               ]}
             >
-              <StyledInput
-                type="number"
-                size="large"
-                placeholder="Darslar soni"
-              />
+              <StyledInput size="large" placeholder="Dars nomi" />
             </Form.Item>
-            <Form.Item
-              className="!mb-0"
-              label={
-                <span className="font-medium text-[#13265C]">
-                  Jami dars davomiyligi
-                </span>
-              }
-              name="lessonDuration"
-              rules={[
-                {
-                  required: true,
-                  message: "Dars davomiyligini kiriting!",
-                },
-              ]}
-            >
-              <StyledInput
-                type="number"
-                size="large"
-                placeholder="Darslar davomiyligi"
-              />
-            </Form.Item>
-          </div>
-          <div className="flex items-end gap-[10px]">
-            <Form.Item
-              className="!mb-0 w-full"
-              label={
-                <span className="font-medium text-[#13265C]">
-                  Bo’lim qo’shish
-                </span>
-              }
-              name="moduleName"
-              rules={[
-                {
-                  required: true,
-                  message: "Iltimos bo'lim nomini kiriting!",
-                },
-              ]}
-            >
-              <StyledInput size="large" placeholder="Yangi bo’lim qo’shish" />
-            </Form.Item>
-            <Form.Item label={null} className="!mb-0">
-              <StyledButton size="large" htmlType="submit">
-                <Check />
-              </StyledButton>
-            </Form.Item>
-          </div>
-        </Form>
+            <div className="flex items-center gap-[10px]">
+              <Form.Item
+                className="!mb-0"
+                label={
+                  <span className="font-medium text-[#13265C]">
+                    Jami darslar soni
+                  </span>
+                }
+                name="lessonCount"
+                rules={[
+                  {
+                    required: true,
+                    message: "Iltimos dars sonini kiriting!",
+                  },
+                ]}
+              >
+                <StyledInput
+                  type="number"
+                  size="large"
+                  placeholder="Darslar soni"
+                />
+              </Form.Item>
+              <Form.Item
+                className="!mb-0"
+                label={
+                  <span className="font-medium text-[#13265C]">
+                    Jami dars davomiyligi
+                  </span>
+                }
+                name="lessonDuration"
+                rules={[
+                  {
+                    required: true,
+                    message: "Dars davomiyligini kiriting!",
+                  },
+                ]}
+              >
+                <StyledInput
+                  type="number"
+                  size="large"
+                  placeholder="Darslar davomiyligi"
+                />
+              </Form.Item>
+            </div>
+            <div className="flex items-end gap-[10px]">
+              <Form.Item
+                className="!mb-0 w-full"
+                label={
+                  <span className="font-medium text-[#13265C]">
+                    Bo’lim qo’shish
+                  </span>
+                }
+                name="moduleName"
+                rules={[
+                  {
+                    required: true,
+                    message: "Iltimos bo'lim nomini kiriting!",
+                  },
+                ]}
+              >
+                <StyledInput size="large" placeholder="Yangi bo’lim qo’shish" />
+              </Form.Item>
+              <Form.Item label={null} className="!mb-0">
+                <StyledButton size="large" htmlType="submit">
+                  <Check />
+                </StyledButton>
+              </Form.Item>
+            </div>
+          </Form>
+        </div>
+        <MenuWrapper>
+          <div className="menu-header">Kurs tarkibi</div>
+          <StyledMenu
+            onClick={onSubmit}
+            mode="inline"
+            items={items}
+            defaultOpenKeys={["sub1"]}
+          />
+        </MenuWrapper>
       </div>
-      <MenuWrapper>
-        <div className="menu-header">Kurs tarkibi</div>
-        <StyledMenu
-          onClick={onSubmit}
-          mode="inline"
-          items={items}
-          defaultOpenKeys={["sub1"]}
-        />
-      </MenuWrapper>
-    </div>
+      <DarslikAddVideo isModalOpen={isModalOpen} handleCancel={handleCancel} />
+    </>
   );
 }
