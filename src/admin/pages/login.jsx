@@ -54,9 +54,6 @@ export default function AdminLogin() {
             <p className="text-[32px] font-medium pb-10">Kirish</p>
             <Form
               name="basic"
-              initialValues={{
-                remember: true,
-              }}
               onFinish={onFinish}
               autoComplete="off"
               className="flex flex-col gap-5"
