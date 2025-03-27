@@ -10,6 +10,7 @@ import Testlar from './admin/pages/testlar'
 import Analitika from './admin/pages/analitika'
 import Topshiriqlar from './admin/pages/topshiriqlar'
 import Maqolalarim from './admin/pages/maqolalarim'
+import MaqolaTahrir from './admin/pages/maqolatahrir'
 import Layout from './components/Layout'
 import Tasks from './pages/Tasks'
 import Tests from './pages/Tests'
@@ -29,14 +30,17 @@ export default function App () {
         <Route path='/' element={<Main />} />
         <Route path='/login' element={<Login />} />
         <Route path='/admin-login' element={<AdminLogin />} />
-        <Route path='/admin/home' element={<AdminHome />} />
-        <Route path='/admin' element={<AdminLayout />} />
-        <Route path='/admin/darsliklar' element={<Darslar />} />
-        <Route path='/admin/testlar' element={<Testlar />} />
-        <Route path='/admin/analitika' element={<Analitika />} />
-        <Route path='/admin/topshiriqlar' element={<Topshiriqlar />} />
-        <Route path='/admin/maqolalarim' element={<Maqolalarim />} />
-
+        {/* Admin layout (parent route) */}
+        <Route path='/admin' element={<AdminLayout />}>
+          {/* Nested routes (Outlet ichiga chiqadi) */}
+          <Route path='home' element={<AdminHome />} />
+          <Route path='darsliklar' element={<Darslar />} />
+          <Route path='testlar' element={<Testlar />} />
+          <Route path='analitika' element={<Analitika />} />
+          <Route path='topshir iqlar' element={<Topshiriqlar />} />
+          <Route path='maqolalarim' element={<Maqolalarim />} />
+          <Route path='maqolalarim/edit/:id' element={<MaqolaTahrir />} />
+        </Route>
         {/* Dashboard layout (parent route) */}
         <Route path='/dashboard' element={<Layout />}>
           {/* Nested routes (Outlet ichiga chiqadi) */}
@@ -46,7 +50,7 @@ export default function App () {
           <Route path='tests' element={<Tests />} />
           <Route path='tests/:id' element={<TestSubmission />} />
           <Route path='articles' element={<Articles />} />
-          <Route path='articles:id' element={<ArticlePage />} />
+          <Route path='articles/:id' element={<ArticlePage />} />
           <Route path='profile' element={<Profile />} />
           <Route path='access-lessons' element={<Acess_Lessons />} />
           <Route path='test-results' element={<TestResults />} />
