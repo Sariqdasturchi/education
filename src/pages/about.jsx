@@ -2,7 +2,7 @@ import React from 'react'
 import { GoArrowRight } from 'react-icons/go'
 import { AboutSkilList } from '../utils/constant'
 
-export default function About () {
+export default function About() {
   return (
     <section
       className='w-full h-auto flex justify-center items-center bg-[#F4F7FF]'
@@ -29,9 +29,8 @@ export default function About () {
               {AboutSkilList.map((item, index) => (
                 <li
                   key={item.id}
-                  className={`${
-                    index === AboutSkilList.length - 5 ? 'mt-0' : 'mt-10'
-                  } flex items-center`}
+                  className={`${index === AboutSkilList.length - 5 ? 'mt-0' : 'mt-10'
+                    } flex items-center`}
                 >
                   <span>
                     <img src={item.icon} alt={item.title} />

@@ -71,10 +71,10 @@ export default function TestSubmission() {
             <div className="flex gap-6 mt-6 p-6">
                 <div className="w-2/3 h-[600px] overflow-y-auto p-4 bg-white shadow-lg rounded-xl">
                     {tests.map((test, index) => (
-                        <div key={test.id} className="mb-4 p-4 border rounded-xl">
+                        <div key={test.id} className="mb-4 p-4 border border-gray-300 rounded-xl">
                             <h3 className="text-lg font-semibold mb-3">{index + 1}. {test.question}</h3>
                             {test.options.map((option, optIndex) => (
-                                <button key={optIndex} onClick={() => selectAnswer(test.id, optIndex)} className={`w-full text-left p-3 border rounded-xl mb-2 transition duration-300 ${selectedAnswers[test.id] === optIndex ? "border-blue-600 bg-blue-100" : "hover:bg-gray-100"}`}>{option}</button>
+                                <button key={optIndex} onClick={() => selectAnswer(test.id, optIndex)} className={`w-full text-left p-3 border border-gray-300 rounded-xl mb-2 transition duration-300 ${selectedAnswers[test.id] === optIndex ? "border-blue-600 bg-blue-100" : "hover:bg-gray-100"}`}>{option}</button>
                             ))}
                         </div>
                     ))}
@@ -85,7 +85,7 @@ export default function TestSubmission() {
                         <h3 className="text-lg font-semibold mb-3">Test nomi</h3>
                         <div className="grid grid-cols-5 gap-2">
                             {tests.map((test, index) => (
-                                <button key={index} className={`w-10 h-10 flex items-center justify-center rounded-xl border transition ${selectedAnswers[test.id] !== undefined ? "bg-blue-600 text-white" : "bg-gray-100 hover:bg-gray-200"}`}>{index + 1}</button>
+                                <button key={index} className={`w-10 h-10 flex items-center justify-center rounded-xl transition ${selectedAnswers[test.id] !== undefined ? "bg-blue-600 text-white" : "bg-gray-100 hover:bg-gray-200"}`}>{index + 1}</button>
                             ))}
                         </div>
                     </div>

@@ -2,9 +2,11 @@ import React from "react";
 import PageHeader from "../components/PageHeader";
 import { TestCard } from "../components/TestCard";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 const Tests = () => {
   const navigate = useNavigate();
+  const isOpen = useSelector((state) => state.sidebar.isOpen);
 
   const tests = [
     { number: 1, title: "1-Test", description: "Umumiy bo‘luvchi va umumiy karrali. EKUB va EKUK", status: "Yuborish" },
@@ -20,11 +22,11 @@ const Tests = () => {
   };
   return (
     <div>
-      <PageHeader title="Testlar" />
+      <PageHeader title="Testlar" className="hidden sm:hidden md:block" />
       <div className="mt-6 flex flex-wrap gap-6 justify-start ml-4">
         {tests.map((test) => (
           <div onClick={() => handletestClick(test)} className="cursor-pointer">
-          <TestCard key={test.id} number={test.number} title={test.title} description={test.description} status={test.status} />
+            <TestCard key={test.id} number={test.number} title={test.title} description={test.description} status={test.status} />
           </div>
         ))}
       </div>

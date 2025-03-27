@@ -1,6 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import { Button, Card } from "antd";
+import { useSelector, useDispatch } from "react-redux";
 
 const testData = [
   {
@@ -26,9 +27,11 @@ const testData = [
 ];
 
 export default function TestResults() {
+  const isOpen = useSelector((state) => state.sidebar.isOpen);
+
   return (
     <div>
-      <PageHeader title="Test natijalari" />
+<PageHeader title="Test natijalari" className="hidden sm:hidden md:block" />
       <div className="p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {testData.map((test) => (

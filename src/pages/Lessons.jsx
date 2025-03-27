@@ -1,6 +1,7 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
 import LessonCard from "../components/LessonCard";
+import { useSelector, useDispatch } from "react-redux";
 
 const Lessons = () => {
 
@@ -31,12 +32,14 @@ const Lessons = () => {
     },
   ];
 
+  const isOpen = useSelector((state) => state.sidebar.isOpen);
 
   return (
     <div>
-      <PageHeader title="Darsliklar" />
+
+      <PageHeader title="Darsliklar" className="hidden sm:hidden md:block" />
       {/* Darsliklarni ro‘yxat sifatida chiqarish */}
-      <div className="mt-4 flex flex-wrap gap-6 justify-start ml-4 ">
+      <div className="mt-4 flex flex-wrap gap-6 justify-start ml-4">
         {lessons.map((lesson, index) => (
           <LessonCard
             key={index}
