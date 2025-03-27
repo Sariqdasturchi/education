@@ -1,0 +1,6 @@
+{
+  "watch": ["src", ".env"],
+  "ext": "js,json",
+  "ignore": ["node_modules"],
+  "exec": "dotenv -e .env -- node src/app.js"
+}
