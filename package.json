@@ -33,9 +33,23 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
-    "vite": "^6.2.0"
+    "rollup": "^4.37.0",
+    "vite": "^6.2.3"
   },
   "resolutions": {
     "styled-components": "^5"
-  }
+  },
+  "description": "",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sariqdasturchi/education.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sariqdasturchi/education/issues"
+  },
+  "homepage": "https://github.com/Sariqdasturchi/education#readme"
 }
