@@ -39,12 +39,6 @@ export default function Education() {
               foydalanib talabalarning mustaqil ta`limini takomillashtirishdan
               iborat.
             </h4>
-            <button
-              onClick={() => navigate("/login")}
-              className="bg-[#13265C] h-[44px] rounded-[50px] text-[16px] text-white w-[241px] cursor-pointer duration-500 font-normal hover:bg-[#BBBBBB] transform"
-            >
-              Darslarni ko’rish <GoArrowRight className="text-[20px] inline" />
-            </button>
           </div>
         </div>
       </div>
